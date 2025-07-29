@@ -6,14 +6,29 @@ article{
   margin: 20px;
   border: 1px solid #ccc;
 
-  a{
-    height: 100%;
+  .link_image{
     width: 50%;
+    height: 100%;
+    position: relative;
+
+    .project_img{
+      height: 100%;
+      width: 100%;
+      object-fit:cover;
+      display: block;
+    }
+  }
+
+  a{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 50px;
 
     img{
       height: 100%;
       width: 100%;
-      object-fit:cover;
     }
   }
 

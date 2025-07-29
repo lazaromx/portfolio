@@ -9,5 +9,12 @@ import {RouterLink} from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  showMobileMenu(){
+    const mobileMenu = document.querySelector('.mobile-navigation');
+    const icon = document.querySelector('.mobile-menu-icon')?.children[0].children[0];
+    if(mobileMenu){
+      mobileMenu.classList.toggle('open');
+      icon?.classList.toggle("fa-xmark")
+    }
+  }
 }

@@ -1,4 +1,4 @@
-header{
+header {
   background-color: #063254;
   display: flex;
   padding: 10px 20px;
@@ -6,7 +6,9 @@ header{
   align-items: center;
   justify-content: space-between;
 
-  .profile-photo{
+  .profile-photo {
+    width: 20%;
+
     img {
       width: 60px;
       height: 60px;
@@ -14,9 +16,9 @@ header{
       object-fit: cover;
       border: 2px solid #fff;
       transition: transform 0.3s ease;
-      transform-origin: center ;
+      transform-origin: center;
 
-      &:hover{
+      &:hover {
         transform: scale(1.2);
         cursor: pointer;
       }
@@ -24,26 +26,27 @@ header{
   }
 
   .navigation{
-    .list{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+    .list {
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 30px;
       list-style: none;
-      padding: 0;
-      margin: 0;
+      justify-content: space-around;
+      width: 100%;
 
-      li{
-        font-size: 20px;
+      li {
+        font-size: 1.5rem;
 
-        a{
+        a {
           display: inline-block; //Necessário para o transform funcionar
-          color: #fff;
-          text-decoration: none;
           transition: transform 0.3s ease;
-          transform-origin: center ;
+          transform-origin: center;
 
-          &:hover{
+          &:hover {
             transform: scale(1.2);
             cursor: pointer;
           }
@@ -51,6 +54,58 @@ header{
       }
     }
   }
+
 }
 
+.mobile-menu-icon{
+  display: none;
+}
 
+.mobile-navigation{
+  display: none;
+}
+
+@media screen and (max-width: 730px){
+  header{
+    padding: 1.5rem 4rem;
+  }
+
+  .nav-item{
+    display: none;
+  }
+
+  .mobile-menu-icon{
+    display: block;
+
+    button{
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+
+  .mobile-navigation{
+    .list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      list-style: none;
+    }
+
+    .nav-item{
+      display: block;
+      padding-top: 1.2rem;
+    }
+  }
+}
+
+.open{
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}

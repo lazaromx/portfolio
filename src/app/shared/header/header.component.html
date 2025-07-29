@@ -4,10 +4,23 @@
   </div>
   <nav class="navigation">
     <ul class="list">
-      <li><a href="">Inicio</a></li>
-      <li><a href="">Sobre</a></li>
-      <li><a routerLink="/projects">Projetos</a></li>
-      <li><a href="">Contato</a></li>
+      <li class="nav-item"><a href="">Inicio</a></li>
+      <li class="nav-item"><a href="">Sobre</a></li>
+      <li class="nav-item"><a routerLink="/projects">Projetos</a></li>
+      <li class="nav-item"><a href="">Contato</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-menu-icon">
+    <button (click)="showMobileMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <nav class="mobile-navigation">
+    <ul class="list">
+      <li class="nav-item"><a href="">Inicio</a></li>
+      <li class="nav-item"><a href="">Sobre</a></li>
+      <li class="nav-item"><a routerLink="/projects">Projetos</a></li>
+      <li class="nav-item"><a href="">Contato</a></li>
     </ul>
   </nav>
 </header>
