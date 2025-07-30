@@ -1,20 +1,20 @@
 <header>
-  <div class="profile-photo">
-    <img src="perfil_lazaro.jpg" alt="Foto de perfil" >
-  </div>
-  <nav class="navigation">
+  <nav class="nav-bar">
+    <div class="profile-photo">
+      <img src="perfil_lazaro.jpg" alt="Foto de perfil" />
+    </div>
     <ul class="list">
       <li class="nav-item"><a href="">Inicio</a></li>
       <li class="nav-item"><a href="">Sobre</a></li>
       <li class="nav-item"><a routerLink="/projects">Projetos</a></li>
       <li class="nav-item"><a href="">Contato</a></li>
     </ul>
+    <div class="mobile-menu-icon">
+      <button (click)="showMobileMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
   </nav>
-  <div class="mobile-menu-icon">
-    <button (click)="showMobileMenu()">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
   <nav class="mobile-navigation">
     <ul class="list">
       <li class="nav-item"><a href="">Inicio</a></li>
@@ -24,4 +24,3 @@
     </ul>
   </nav>
 </header>
-
