@@ -17,4 +17,11 @@ export class HeaderComponent {
       icon?.classList.toggle("fa-xmark")
     }
   }
+
+  scrollTo(sectionId: string){
+    const section = document.getElementById(sectionId);
+    if(section){
+      section.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+  }
 }

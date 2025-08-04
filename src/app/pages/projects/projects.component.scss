@@ -1,20 +1,21 @@
-article{
+.project-card{
   height: 250px;
   width: 600px;
   display: flex;
   justify-content: center;
   margin: 20px;
   border: 1px solid #ccc;
+  background-color: #fff;
 
-  .link_image{
+  .link-image{
     width: 50%;
     height: 100%;
     position: relative;
 
-    .project_img{
+    .project-img{
       height: 100%;
       width: 100%;
-      object-fit:cover;
+      object-fit: cover;
       display: block;
     }
   }

@@ -3,3 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html{
+  scroll-behavior: smooth;
+  background-image: url('/wallpaper_portfolio.jpg');
+  background-repeat: no repeat;
+  background-size: cover;
+}
+
+section{
+  // min-height: 100;
+}
