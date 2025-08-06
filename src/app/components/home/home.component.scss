@@ -21,6 +21,20 @@
   flex-direction: column;
 }
 
+.links{
+  display: flex;
+
+  a{
+    width: 50px;
+    height: 50px;
+  }
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+}
 // .background{
 //   background-image: url('/wallpaper_portfolio.jpg');
 //   background-repeat: no repeat;
