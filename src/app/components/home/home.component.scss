@@ -34,6 +34,25 @@
     height: 100%;
   }
 
+  svg{
+    // color:#fff;
+    fill: white
+  }
+
+}
+
+h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
+}
+
+p{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
 }
 // .background{
 //   background-image: url('/wallpaper_portfolio.jpg');

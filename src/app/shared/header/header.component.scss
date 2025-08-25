@@ -1,5 +1,7 @@
 header {
-  background-color: #063254;
+  // background-color: #063254;
+  // background: transparent;
+  background: #000;
   padding: 1rem 2rem;
   min-height: 80px;
   align-items: center;
@@ -7,7 +9,10 @@ header {
   top: 0;
   width: 100%;
   left: 0;
+  border-bottom: 1px solid #0074D9;
+  z-index: 1000;
 }
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -42,22 +47,11 @@ header {
     // margin: 0;
     // padding: 0;
 
-    .nav-item {
-      position: relative;
 
-      a {
-        display: inline-block; //Necessário para o transform funcionar
-        transition: transform 0.3s ease;
-        transform-origin: center;
-        font-size: 1.1rem;
-        font-weight: 500;
+  }
 
-        &:hover {
-          transform: scale(1.2);
-          cursor: pointer;
-        }
-      }
-    }
+  .selected{
+    transform: scale(1.2);
   }
 
   // .navigation{
@@ -123,4 +117,25 @@ header {
 a {
   text-decoration: none;
   color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.nav-item{
+  position: relative;
+
+  a{
+    display: inline-block; //Necessário para o transform funcionar
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+  }
 }
