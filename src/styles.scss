@@ -5,6 +5,17 @@
   border: 0;
 }
 
+h1, h2, h3{
+  font-family: "Montserrat", sans-serif;
+  // font-family: "Poppins", sans-serif;
+}
+
+p, a, span, li{
+  // font-family: 'Roboto', sans-serif;
+  font-family: "Open Sans", sans-serif;
+
+}
+
 $header-height: 100px;
 
 section{
