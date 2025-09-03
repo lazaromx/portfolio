@@ -7,21 +7,26 @@
 
 h1, h2, h3{
   font-family: "Montserrat", sans-serif;
+  color: #fff
   // font-family: "Poppins", sans-serif;
 }
 
-p, a, span, li{
+p, a, span, li, label{
   // font-family: 'Roboto', sans-serif;
   font-family: "Open Sans", sans-serif;
+  color: #fff;
 
 }
 
 $header-height: 100px;
 
 section{
-  min-height: calc(100vh + var(--header-height));
+  // min-height: calc(100vh + var(--header-height));
+  min-height: calc(100vh + $header-height);
   align-content: center;
 }
+
+
 html{
   scroll-behavior: smooth;
   // background-image: url('/wallpaper_portfolio.jpg');
@@ -29,4 +34,9 @@ html{
   // background-size: cover;
   // background: linear-gradient(to bottom, #0f0f0f, #0f2027);
   background: linear-gradient(to bottom, #0f0f0f, #001f3f);
+}
+
+#contato{
+  display: flex;
+  justify-content: center;
 }
