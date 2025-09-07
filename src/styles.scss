@@ -11,7 +11,7 @@ h1, h2, h3{
   // font-family: "Poppins", sans-serif;
 }
 
-p, a, span, li, label{
+p, a, span, li, label, input, textarea{
   // font-family: 'Roboto', sans-serif;
   font-family: "Open Sans", sans-serif;
   color: #fff;
@@ -34,9 +34,4 @@ html{
   // background-size: cover;
   // background: linear-gradient(to bottom, #0f0f0f, #0f2027);
   background: linear-gradient(to bottom, #0f0f0f, #001f3f);
-}
-
-#contato{
-  display: flex;
-  justify-content: center;
 }
