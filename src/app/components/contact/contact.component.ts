@@ -1,16 +1,54 @@
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-// contactForm: FormGroup;
+  formData = {
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  };
+
+  isLoading = false;
+  isSuccess = false;
+  isError = false;
+
+  constructor(private http: HttpClient) {}
+
+  onSubmit(){
+    this.isLoading = true;
+    this.isSuccess = false;
+    this.isError = false;
+
+    const apiUrl = '/api/send-email.js';
+
+    this.http.post(apiUrl, this.formData).subscribe({
+      next: (response) => {
+        console.log("Sucesso!", response);
+        this.isLoading = false;
+        this.isSuccess = true;
+        this.formData = {name: '', email: '', subject: '', message: ''};
+      },
+      error: (error) =>{
+        console.error( 'Erro!', error);
+        this.isLoading = false;
+        this.isError = true;
+      }
+    });
+  }
+
+  }
+  // contactForm: FormGroup;
 //   isSubmitting = false;
 //   submitSuccess = false;
 //   submitError = false;
@@ -38,4 +76,4 @@ export class ContactComponent {
 //       }, 2000);
 //     }
 //   }
-}
+

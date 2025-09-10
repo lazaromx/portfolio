@@ -2,17 +2,27 @@
   <h1>Entre em contato</h1>
 
   <div class="form-container">
-    <form action="">
-      <label for="">Seu nome</label>
-      <input type="text">
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <label for="name">Seu nome</label>
+      <input type="text" id="name" name="name" [(ngModel)] = "formData.name" required>
       <label for="">Seu email</label>
-      <input type="email">
+      <input type="email" id="email" name="email" [(ngModel)] = "formData.email" required>
       <label for="">Assunto</label>
-      <input type="text">
+      <input type="text" id="subject" name="subject" [(ngModel)] = "formData.subject" required>
       <label for="">Sua mensagem</label>
-      <textarea name="" id=""></textarea>
+      <textarea  id="message" name="message" [(ngModel)] = "formData.message" required></textarea>
 
-      <button type="submit"></button>
+      <button type="submit" [disabled]="!contactForm.valid || isLoading">
+        {{isLoading ? 'Enviando...' : 'Enviar Mensagem'}}
+      </button>
+
+      <p *ngIf="isSuccess" class="sucess-message">
+        Mensagem Enviada com sucesso! Aguarde o retorno.
+      </p>
+      <p *ngIf="isError" class="error-message">
+        Ocorreu um erro ao enviar a mensagem. Tente novamente ou me contate pelo <a href="https://www.linkedin.com/in/lazaromx/">linkedind</a>.
+      </p>
+
     </form>
   </div>
 </div>
