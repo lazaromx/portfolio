@@ -6,6 +6,28 @@ export default async function handler(require, res){
   }
 }
 
+// export default function handler(req, res) {
+//   // Configuração do CORS
+//   res.setHeader("Access-Control-Allow-Origin", "https://portfoliolazaro.vercel.app"); // pode restringir para seu domínio depois
+//   res.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+//   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+//   // Se for uma requisição de pré-verificação (OPTIONS), retorna apenas os headers
+//   if (req.method === "OPTIONS") {
+//     return res.status(200).end();
+//   }
+
+//   if (req.method === "POST") {
+//     const { name, email, message } = req.body;
+
+//     // aqui você adiciona a lógica de envio de email
+//     return res.status(200).json({ success: true, message: "Email enviado com sucesso!" });
+//   }
+
+//   res.status(405).json({ error: "Método não permitido" });
+// }
+
+
 const {name, email, subject, message} = req.body;
 
 if(!name || !email || !subject || !message){
@@ -39,3 +61,5 @@ try{
   console.error('Erro ao enviar email: ', error);
   res.status(500).json({error: 'Falha ao enviar email'});
 }
+
+

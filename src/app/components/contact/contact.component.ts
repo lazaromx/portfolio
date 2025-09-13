@@ -30,7 +30,7 @@ export class ContactComponent {
     this.isSuccess = false;
     this.isError = false;
 
-    const apiUrl = '/api/send-email.js';
+    const apiUrl = 'https://portfoliolazaro.vercel.app/api/send-email';
 
     this.http.post(apiUrl, this.formData).subscribe({
       next: (response) => {
