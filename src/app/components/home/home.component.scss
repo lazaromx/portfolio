@@ -1,17 +1,19 @@
 .home{
   color: #fff;
   display: flex;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 
 .profile-photo img{
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   object-fit: cover;
+  object-position: 50% 80%;
 }
 
 .info{
@@ -70,8 +72,12 @@ p{
   font-style: normal;
   font-size: 20px;
 }
-// .background{
-//   background-image: url('/wallpaper_portfolio.jpg');
-//   background-repeat: no repeat;
-//   background-size: cover;
-// }
+
+@media screen and (max-width: 730px){
+  .home{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
