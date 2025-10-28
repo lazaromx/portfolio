@@ -10,7 +10,7 @@
   backdrop-filter: blur(6px);
   // background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
-
+  width: 600px;
 }
 
 form{
@@ -34,12 +34,23 @@ form{
       box-shadow: 0 0 8px #007bff;
     }
   }
+  button{
+    color: #fff;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 6px;
+    width: 200px;
+    align-self: center;
+    background-color: #007bff;
+  }
 }
 
-button{
-  background-color: blue;
-  color: #fff;
+.error-message{
+  text-align: center;
+
+  // flex-wrap: nowrap;
 }
+
 
 
 
