@@ -5,11 +5,10 @@ import { FormGroup, FormBuilder, Validators, ReactiveFormsModule, FormsModule} f
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+    selector: 'app-contact',
+    imports: [CommonModule, ReactiveFormsModule, FormsModule],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   formData = {
